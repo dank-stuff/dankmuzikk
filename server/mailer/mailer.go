@@ -34,7 +34,7 @@ func sendEmail(subject, content, to string) error {
 	mime := "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\n\n"
 	_subject := "Subject: " + subject
 	_to := "To: " + to
-	_from := fmt.Sprintf("From: Baraa from DankMuzikk <%s>", config.Env().Smtp.Username)
+	_from := fmt.Sprintf("From: DankMuzikk Email Verification <%s>", config.Env().Smtp.Username)
 	body := fmt.Appendf([]byte{}, "%s\n%s\n%s\n%s\n%s", _from, _to, _subject, mime, content)
 
 	addr := config.Env().Smtp.Host + ":" + config.Env().Smtp.Port
