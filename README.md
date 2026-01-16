@@ -69,14 +69,20 @@ git clone https://github.com/mbaraa/dankmuzikk
 cp .env.example .env.docker
 ```
 
-3. Run it with docker compose.
+3. Create required directories
+
+```bash
+mkdir -p .db/{etc,var} .serve/{muzikkx,pix} .google-chrome-data
+```
+
+4. Run it with docker compose.
 
 ```bash
 docker compose up -f docker-compose-all.yml
 ```
 
-3. Visit http://localhost:20250
-4. Don't ask why I chose this weird port.
+5. Visit http://localhost:20250
+6. Don't ask why I chose this weird port.
 
 ## Acknowledgements
 

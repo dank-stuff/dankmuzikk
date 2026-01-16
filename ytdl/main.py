@@ -22,6 +22,9 @@ YT_ERROR = {
 def download_yt_song(id: str) -> int:
     try:
         ytdl = YoutubeDL({
+            "cookiesfrombrowser": ("chrome", "/app/google-chrome-data/"),
+            "remote_components": ["ejs:npm"],
+            "js_runtimes": {"node": {}},
             "format": "251,140,249,250,233,234,139,bestaudio/best",
             "postprocessors": [{
                 "key": "FFmpegExtractAudio",

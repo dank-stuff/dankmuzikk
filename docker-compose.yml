@@ -44,6 +44,7 @@ services:
       - .env.docker
     volumes:
       - dank-files:/app/.serve
+      - dank-ytdl-chrome-data:/app/google-chrome-data/
     networks:
       - danknetwork
 
@@ -103,3 +104,10 @@ volumes:
       type: none
       o: bind
       device: ./.db/var
+
+  dank-ytdl-chrome-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./.google-chrome-data

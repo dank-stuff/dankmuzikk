@@ -4,12 +4,14 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 RUN apk update && \
-    apk add --no-cache ffmpeg
+    apk add --no-cache ffmpeg nodejs
 
 COPY requirements.txt /app/requirements.txt
 
 RUN pip install --upgrade pip
 RUN pip install -r /app/requirements.txt
+RUN pip install -U "yt-dlp[default]"
+RUN pip install yt-dlp-ejs
 
 COPY . /app
 WORKDIR /app
