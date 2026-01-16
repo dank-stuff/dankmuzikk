@@ -375,6 +375,10 @@ func generateComposeFile(values TemplateValues) (string, error) {
 				VolumeName: filesVolumeName,
 				MountPath:  "/app/.serve",
 			},
+			{
+				VolumeName: "dank-ytdl-chrome-data",
+				MountPath:  "/app/google-chrome-data",
+			},
 		},
 		Networks: []string{
 			values.NetworkName,
