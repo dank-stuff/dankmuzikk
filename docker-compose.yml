@@ -33,12 +33,10 @@ services:
 
   dank-ytdl:
     container_name: "dank-ytdl"
-    build:
-      context: ./ytdl
-      dockerfile: Dockerfile
+    image: "mbaraa/ytdl-api"
     restart: "always"
     ports:
-      - "20254:8000"
+      - "20254:4321"
     stdin_open: true
     env_file:
       - .env.docker
