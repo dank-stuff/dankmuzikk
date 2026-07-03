@@ -3,7 +3,7 @@ module dankmuzikk
 go 1.26.0
 
 require (
-	codeberg.org/dankstuff/danklyrics/pkg v0.4.34
+	codeberg.org/dankstuff/danklyrics/pkg v0.4.35
 	github.com/a-h/templ v0.3.906
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/golang-jwt/jwt/v4 v4.5.2
