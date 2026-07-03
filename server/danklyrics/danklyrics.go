@@ -4,8 +4,8 @@ import (
 	"dankmuzikk/app"
 	"dankmuzikk/config"
 
-	"github.com/mbaraa/danklyrics/pkg/client"
-	"github.com/mbaraa/danklyrics/pkg/provider"
+	"codeberg.org/dankstuff/danklyrics/pkg/client"
+	"codeberg.org/dankstuff/danklyrics/pkg/provider"
 )
 
 type dankLyrics struct {
